@@ -1,0 +1,20 @@
+[project]
+name = "p17pipe"
+version = "0.1.0"
+description = "Ingestion, analysis and SPC pipeline for KLA Tencor P-17 profilometer exports"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+p17pipe = "p17pipe.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["p17pipe*"]
